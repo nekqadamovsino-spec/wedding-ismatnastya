@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#f4f1ec" />
+  <meta property="og:title" content="Ismat & Nastya — 30.08.2026" />
+  <meta property="og:description" content="Приглашение на свадьбу" />
+  <meta property="og:image" content="assets/couple.jpg" />
+  <title>Ismat & Nastya — Wedding Invitation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Montserrat:wght@300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="locked">
+  <div id="preloader" class="preloader"><span></span></div>
+
+  <section id="envelopeScreen" class="envelope-screen" aria-label="Открыть приглашение">
+    <div class="envelope-copy">ПРИГЛАШЕНИЕ<br>НА СВАДЬБУ</div>
+    <button id="openEnvelope" class="envelope" type="button" aria-label="Открыть приглашение">
+      <span class="envelope-back"></span>
+      <span class="envelope-left"></span>
+      <span class="envelope-right"></span>
+      <span class="envelope-bottom"></span>
+      <span class="envelope-flap"></span>
+      <span class="seal"><b>IN</b></span>
+    </button>
+    <div class="tap-hint">нажмите, чтобы открыть</div>
+  </section>
+
+  <button id="musicButton" class="music-button" type="button" aria-label="Включить музыку" hidden>
+    <span class="music-bars"><i></i><i></i><i></i><i></i></span>
+  </button>
+  <audio id="bgMusic" loop preload="none"><source src="assets/music.mp3" type="audio/mpeg"></audio>
+
+  <main id="site" class="site" aria-hidden="true">
+    <section class="hero section-full">
+      <div class="hero-photo" aria-hidden="true"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-content reveal">
+        <p class="hero-kicker">wedding day</p>
+        <h1>Ismat<br><span>&</span><br>Nastya</h1>
+        <p class="hero-date">30 · 08 · 2026</p>
+      </div>
+      <div class="scroll-cue">листайте вниз</div>
+    </section>
+
+    <section class="flower-section section-full">
+      <div class="soft-flower flower-one"></div>
+      <div class="soft-flower flower-two"></div>
+      <div class="greeting reveal">
+        <p class="eyebrow">ДОРОГИЕ РОДНЫЕ<br>И ДРУЗЬЯ</p>
+        <p>В нашей жизни наступает особенный день, который мы хотим разделить с самыми близкими людьми.</p>
+        <p>Будем счастливы видеть вас рядом, чтобы вместе наполнить этот день теплом, радостью и красивыми воспоминаниями.</p>
+      </div>
+    </section>
+
+    <section class="photo-card-section section-full">
+      <div class="photo-card reveal">
+        <img src="assets/couple.jpg" alt="Ismat и Nastya" />
+        <div class="photo-card-shade"></div>
+        <div class="script-name">Ismat<br>& Nastya</div>
+      </div>
+    </section>
+
+    <section class="invite-section section-full">
+      <div class="invite-card reveal">
+        <p class="eyebrow">ПРИГЛАШАЕМ<br>ВАС НА СВАДЬБУ</p>
+        <div class="names-mini">Ismat <span>&</span> Nastya</div>
+        <div class="year-line"><span>АВГУСТ</span><span>2026</span></div>
+        <div class="calendar" aria-label="Календарь август 2026">
+          <div class="week">ПН</div><div class="week">ВТ</div><div class="week">СР</div><div class="week">ЧТ</div><div class="week">ПТ</div><div class="week">СБ</div><div class="week">ВС</div>
+          <div></div><div></div><div></div><div></div><div></div><div>1</div><div>2</div>
+          <div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div>
+          <div>10</div><div>11</div><div>12</div><div>13</div><div>14</div><div>15</div><div>16</div>
+          <div>17</div><div>18</div><div>19</div><div>20</div><div>21</div><div>22</div><div>23</div>
+          <div>24</div><div>25</div><div>26</div><div>27</div><div>28</div><div>29</div><div class="selected">30</div>
+          <div>31</div>
+        </div>
+        <div class="time-script">Начало в 14:00</div>
+      </div>
+    </section>
+
+    <section class="location-section section-full">
+      <div class="location-inner reveal">
+        <div class="time-script top-time">Начало в 14:00</div>
+        <h2>ЖДЕМ ВАС<br>ПО АДРЕСУ</h2>
+        <p>г. Москва<br>Тихорецкий бульвар, 1, стр. 19</p>
+        <a class="outline-button" href="https://yandex.ru/maps/-/CTb5iKKa" target="_blank" rel="noopener">Смотреть на карте</a>
+        <div class="map-illustration">
+          <span class="road r1"></span><span class="road r2"></span><span class="road r3"></span><span class="road r4"></span>
+          <span class="pin">●</span>
+          <span class="map-label">Москва</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="guest-chat section-full">
+      <div class="guest-inner reveal">
+        <h2>ЧАТ ДЛЯ ГОСТЕЙ</h2>
+        <p>Присоединяйтесь к нашему общему чату — там можно будет делиться фотографиями и важной информацией.</p>
+        <div class="phone-mockup">
+          <div class="phone-notch"></div>
+          <div class="chat-head">Ismat & Nastya</div>
+          <div class="bubble left">До встречи на свадьбе!</div>
+          <div class="bubble right">Будем ждать вас 🤍</div>
+        </div>
+        <a class="outline-button muted" href="#" onclick="return false">Перейти в чат</a>
+      </div>
+    </section>
+
+    <section class="rsvp-section">
+      <div class="rsvp-inner reveal">
+        <h2>АНКЕТА</h2>
+        <p class="rsvp-intro">Пожалуйста, заполните анкету до 15 августа 2026 года.</p>
+        <form id="rsvpForm">
+          <label>Ваше имя и фамилия
+            <input name="name" type="text" placeholder="Введите имя" required />
+          </label>
+          <fieldset>
+            <legend>Сможете ли вы присутствовать?</legend>
+            <label class="radio"><input type="radio" name="attendance" value="Да, с радостью" required><span>Да, с радостью</span></label>
+            <label class="radio"><input type="radio" name="attendance" value="К сожалению, не смогу"><span>К сожалению, не смогу</span></label>
+          </fieldset>
+          <label>С кем вы придёте?
+            <input name="companion" type="text" placeholder="Имя сопровождающего" />
+          </label>
+          <label>Пожелания или комментарий
+            <textarea name="comment" rows="3" placeholder="Ваш комментарий"></textarea>
+          </label>
+          <button class="submit-button" type="submit">Отправить</button>
+          <p id="formStatus" class="form-status" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="countdown-section section-full">
+      <div class="hands-photo"></div>
+      <div class="countdown-card reveal">
+        <p class="eyebrow">ДО СВАДЬБЫ<br>ОСТАЛОСЬ</p>
+        <div id="countdown" class="countdown">
+          <div><b id="days">00</b><span>дней</span></div>
+          <div><b id="hours">00</b><span>часов</span></div>
+          <div><b id="minutes">00</b><span>минут</span></div>
+          <div><b id="seconds">00</b><span>секунд</span></div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-script">До встречи!</div>
+      <p>Ismat & Nastya · 30.08.2026</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
