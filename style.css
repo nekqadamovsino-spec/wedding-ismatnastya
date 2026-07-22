@@ -11,3 +11,26 @@
 .countdown-section{min-height:720px;background:#eeeae4;padding:55px 34px;display:flex;align-items:flex-end}.hands-photo{position:absolute;top:55px;left:34px;right:34px;height:360px;background:linear-gradient(#0001,#0005),url('assets/couple.jpg') 52% 62%/180% auto no-repeat;filter:saturate(.75)}.countdown-card{position:relative;background:#f6f3ed;width:100%;padding:42px 22px;text-align:center;margin-bottom:38px}.countdown-card .eyebrow{margin-bottom:28px}.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}.countdown b{display:block;font:400 24px var(--serif)}.countdown span{display:block;font:300 7px var(--sans);text-transform:uppercase;letter-spacing:.08em;color:#77726b}footer{text-align:center;padding:65px 20px 55px;background:#e6e1d9}.footer-script{font:400 43px var(--script)}footer p{font-size:8px;letter-spacing:.18em;text-transform:uppercase}
 .music-button{position:fixed;right:max(18px,calc((100vw - 430px)/2 + 18px));bottom:22px;z-index:4000;width:42px;height:42px;border-radius:50%;border:1px solid #ffffff77;background:#30302dd9;backdrop-filter:blur(8px);cursor:pointer}.music-bars{height:15px;display:flex;gap:2px;justify-content:center;align-items:end}.music-bars i{display:block;width:2px;background:#fff;height:5px}.music-button.playing i{animation:bars .8s ease-in-out infinite alternate}.music-button.playing i:nth-child(2){animation-delay:.2s}.music-button.playing i:nth-child(3){animation-delay:.4s}.music-button.playing i:nth-child(4){animation-delay:.1s}@keyframes bars{to{height:15px}}
 .reveal{opacity:0;transform:translateY(28px);transition:opacity 1.1s ease,transform 1.1s ease}.reveal.visible{opacity:1;transform:none}@media(min-width:700px){body{padding:25px 0}.site{border-radius:2px}.envelope-copy{font-size:29px}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+.countdown-photo {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.countdown-photo img{
+    width:100%;
+    display:block;
+}
+
+.countdown-overlay{
+    position:absolute;
+    inset:0;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    padding:40px;
+    text-align:center;
+}
