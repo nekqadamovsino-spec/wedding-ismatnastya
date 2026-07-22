@@ -1,1 +1,0 @@
-Загрузите index.html, .nojekyll и папку assets прямо в корень репозитория GitHub Pages. Дата: 30.08.2026. Имена: Ismat & Nastya. Фото и музыка заменены.
