@@ -9,6 +9,7 @@ openEnvelope.addEventListener('click',()=>{
   setTimeout(()=>{
     envelopeScreen.classList.add('opened');
     document.body.classList.remove('locked');
+    document.body.classList.add("site-opened");
     site.setAttribute('aria-hidden','false');
     musicButton.hidden=false;
     document.querySelector('.hero .reveal').classList.add('visible');
