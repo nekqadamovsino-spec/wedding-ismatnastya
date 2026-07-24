@@ -4,15 +4,22 @@ const site=document.getElementById('site');
 const musicButton=document.getElementById('musicButton');
 const audio=document.getElementById('bgMusic');
 window.addEventListener('load',()=>setTimeout(()=>document.getElementById('preloader').classList.add('hide'),250));
-openEnvelope.addEventListener('click',()=>{
-  openEnvelope.classList.add('open');
-  setTimeout(()=>{
-   envelope.addEventListener("click", () => {
-    envelope.classList.add("open");
-    document.body.classList.add("site-opened");
+openEnvelope.addEventListener('click', () => {
+    openEnvelope.classList.add('open');
+    document.body.classList.add('site-opened');
+
+    setTimeout(() => {
+        envelopeScreen.classList.add('opened');
+        document.body.classList.remove('locked');
+
+        site.setAttribute('aria-hidden', 'false');
+        musicButton.hidden = false;
+
+        const hero = document.querySelector('.hero .reveal');
+        if (hero) hero.classList.add('visible');
+    }, 700);
 });
-    site.setAttribute('aria-hidden','false');
-    musicButton.hidden=false;
+musicButton.hidden=false;
     document.querySelector('.hero .reveal').classList.add('visible');
   },700);
 });
