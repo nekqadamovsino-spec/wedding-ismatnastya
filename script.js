@@ -21,7 +21,6 @@ musicButton.addEventListener('click',async()=>{
 });
 const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.18});
 document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
-const target=new Date('2026-08-30T14:00:00+03:00').getTime();
 function updateCountdown(){
  const diff=Math.max(0,target-Date.now());
  const d=Math.floor(diff/86400000),h=Math.floor(diff/3600000)%24,m=Math.floor(diff/60000)%60,s=Math.floor(diff/1000)%60;
