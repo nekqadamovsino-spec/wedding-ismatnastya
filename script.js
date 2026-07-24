@@ -7,9 +7,10 @@ window.addEventListener('load',()=>setTimeout(()=>document.getElementById('prelo
 openEnvelope.addEventListener('click',()=>{
   openEnvelope.classList.add('open');
   setTimeout(()=>{
-    envelopeScreen.classList.add('opened');
-    document.body.classList.remove('locked');
+   envelope.addEventListener("click", () => {
+    envelope.classList.add("open");
     document.body.classList.add("site-opened");
+});
     site.setAttribute('aria-hidden','false');
     musicButton.hidden=false;
     document.querySelector('.hero .reveal').classList.add('visible');
