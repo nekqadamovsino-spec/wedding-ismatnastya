@@ -26,19 +26,50 @@ if (openEnvelope && envelopeScreen) {
 }
 
 if (musicButton && audio) {
-  musicButton.addEventListener('click', async () => {
-    try {
-      if (audio.paused) {
-        await audio.play();
-        musicButton.classList.add('playing');
-      } else {
-        audio.pause();
-        musicButton.classList.remove('playing');
-      }
-    } catch (error) {
-      alert('Добавьте файл assets/music.mp3 — после этого музыка заработает.');
+
+    let musicStarted = false;
+
+    async function startMusic() {
+        if (musicStarted && !audio.paused) return;
+
+        try {
+            await audio.play();
+            musicStarted = true;
+            musicButton.classList.add('playing');
+        } catch (error) {
+            console.log('Автозапуск музыки заблокирован браузером');
+        }
     }
-  });
+
+    // Попытка запустить автоматически после загрузки
+    window.addEventListener('load', () => {
+        setTimeout(startMusic, 500);
+    });
+
+    // Запуск после открытия конверта
+    if (openEnvelope) {
+        openEnvelope.addEventListener('click', () => {
+            setTimeout(startMusic, 700);
+        });
+    }
+
+    // Управление с кнопки
+    musicButton.addEventListener('click', async (event) => {
+        event.stopPropagation();
+
+        try {
+            if (audio.paused) {
+                await audio.play();
+                musicStarted = true;
+                musicButton.classList.add('playing');
+            } else {
+                audio.pause();
+                musicButton.classList.remove('playing');
+            }
+        } catch (error) {
+            alert('Добавьте файл assets/music.mp3');
+        }
+    });
 }
 
 const observer = new IntersectionObserver(
