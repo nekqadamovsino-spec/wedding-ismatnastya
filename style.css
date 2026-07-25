@@ -253,3 +253,18 @@ body.site-opened .hero-name-second{
         margin-right:-28px;
     }
 }
+.phone-mockup{
+    display:none;
+}
+
+.chat-phone-image{
+    width:220px;
+    margin:35px auto;
+    transform:rotate(6deg);
+    filter:drop-shadow(0 20px 30px rgba(0,0,0,.18));
+}
+
+.chat-phone-image img{
+    width:100%;
+    display:block;
+}
