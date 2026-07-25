@@ -13,17 +13,18 @@ window.addEventListener('load', () => {
 
 if (openEnvelope && envelopeScreen) {
   let envelopeOpening = false;
-  openEnvelope.addEventListener('click', async () => {
+  openEnvelope.addEventListener('click', () => {
     if (envelopeOpening) return;
     envelopeOpening = true;
     openEnvelope.classList.add('open');
 
-    // Клик пользователя разрешает запуск музыки в мобильных браузерах.
+    // Музыку запускаем отдельно и НЕ ждём её ответа,
+    // чтобы блокировка автозапуска не мешала открыть сайт.
     if (audio) {
-      try { await audio.play(); } catch (error) {}
+      audio.play().catch(() => {});
     }
 
-    setTimeout(() => {
+    window.setTimeout(() => {
       envelopeScreen.classList.add('opened');
       document.body.classList.remove('locked');
       document.body.classList.add('site-opened');
@@ -32,7 +33,8 @@ if (openEnvelope && envelopeScreen) {
         musicButton.hidden = false;
         if (audio && !audio.paused) musicButton.classList.add('playing');
       }
-    }, 2050);
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    }, 1800);
   });
 }
 
