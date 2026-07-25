@@ -17,17 +17,32 @@
   <div id="preloader" class="preloader"><span></span></div>
 
   <section id="envelopeScreen" class="envelope-screen" aria-label="Открыть приглашение">
-    <div class="envelope-copy">ПРИГЛАШЕНИЕ<br>НА СВАДЬБУ</div>
+    <div class="envelope-aura" aria-hidden="true"></div>
+    <div class="envelope-copy"><span>ПРИГЛАШЕНИЕ</span><span>НА СВАДЬБУ</span></div>
 
-    <button id="openEnvelope" class="envelope-stage" type="button" aria-label="Открыть приглашение">
-      <img class="letter-image" src="assets/letter.png" alt="Приглашение Ismat и Nastya">
-      <img class="open-envelope-image" src="assets/open-envelope.png" alt="" aria-hidden="true">
-      <img class="flap-image" src="assets/flap.png" alt="" aria-hidden="true">
-      <img class="closed-envelope-image" src="assets/envelope.png" alt="Закрытый конверт">
-      <img class="seal-image" src="assets/seal.png" alt="Печать I N">
+    <button id="openEnvelope" class="lux-envelope" type="button" aria-label="Открыть приглашение">
+      <span class="lux-letter" aria-hidden="true">
+        <span class="letter-border"></span>
+        <span class="letter-monogram">I <i></i> N</span>
+        <span class="letter-ornament">◦ ── ♡ ── ◦</span>
+        <span class="letter-greeting">Дорогие гости!</span>
+        <span class="letter-text">Мы будем счастливы разделить<br>с вами этот важный для нас день</span>
+        <span class="letter-date">30 . 08 . 2026</span>
+        <span class="letter-small">ПОДРОБНОСТИ НА САЙТЕ</span>
+      </span>
+
+      <span class="envelope-inside" aria-hidden="true"></span>
+      <span class="envelope-back" aria-hidden="true"></span>
+      <span class="envelope-pocket" aria-hidden="true">
+        <span class="pocket-left"></span>
+        <span class="pocket-right"></span>
+        <span class="pocket-bottom"></span>
+      </span>
+      <span class="envelope-flap" aria-hidden="true"><span></span></span>
+      <span class="wax-seal" aria-hidden="true"><b>I</b><i></i><b>N</b></span>
     </button>
 
-    <div class="tap-hint">нажмите на печать, чтобы открыть</div>
+    <div class="tap-hint"><span></span>нажмите на печать<span></span></div>
   </section>
 
   <button id="musicButton" class="music-button" type="button" aria-label="Включить музыку" hidden>
