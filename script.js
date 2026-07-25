@@ -52,11 +52,6 @@ if (musicButton && audio) {
         }
     }
 
-    // Попытка запустить автоматически после загрузки
-    window.addEventListener('load', () => {
-        setTimeout(startMusic, 500);
-    });
-
     // Запуск после открытия конверта
     if (openEnvelope) {
         openEnvelope.addEventListener('click', () => {
