@@ -12,16 +12,24 @@ window.addEventListener('load', () => {
 });
 
 if (openEnvelope && envelopeScreen) {
+  let opening = false;
+
   openEnvelope.addEventListener('click', () => {
+    if (opening) return;
+    opening = true;
+
     openEnvelope.classList.add('open');
-    document.body.classList.add('site-opened');
+
+    // Письмо успевает красиво выехать из конверта.
+    setTimeout(() => envelopeScreen.classList.add('finishing'), 1900);
 
     setTimeout(() => {
       envelopeScreen.classList.add('opened');
       document.body.classList.remove('locked');
+      document.body.classList.add('site-opened');
       if (site) site.setAttribute('aria-hidden', 'false');
       if (musicButton) musicButton.hidden = false;
-    }, 700);
+    }, 2500);
   });
 }
 
