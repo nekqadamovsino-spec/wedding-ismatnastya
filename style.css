@@ -228,3 +228,28 @@ body.site-opened .hero-name-second{
   .hero-name-first{left:12%;top:57%;font-size:20vw}
   .hero-name-second{right:7%;top:68%;font-size:20vw}
 }
+.map-frame{
+    width:100%;
+    max-width:410px;
+    height:410px;
+    margin:45px auto 28px;
+    overflow:hidden;
+    background:#eee;
+}
+
+.map-frame iframe{
+    display:block;
+    width:100%;
+    height:100%;
+    border:0;
+}
+
+@media(max-width:480px){
+    .map-frame{
+        width:calc(100% + 56px);
+        max-width:none;
+        height:380px;
+        margin-left:-28px;
+        margin-right:-28px;
+    }
+}
