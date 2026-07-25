@@ -346,7 +346,7 @@ body.site-opened .hero-name-second{
   position:absolute;
   left:19%;right:19%;bottom:12%;height:78%;
   z-index:2;
-  transform:translateY(29%);
+  transform:translateY(65%);
   transition:transform 1.25s cubic-bezier(.22,.8,.2,1) .55s,filter .9s ease;
   filter:drop-shadow(0 8px 12px rgba(0,0,0,.10));
 }
@@ -449,7 +449,7 @@ body.site-opened .hero-name-second{
 .lux-envelope.open{animation:none}
 .lux-envelope.open .wax-seal{opacity:0;transform:translate(-50%,-50%) scale(.2) rotate(25deg)}
 .lux-envelope.open .envelope-flap{transform:rotateX(180deg);z-index:1}
-.lux-envelope.open .lux-letter{transform:translateY(-37%);box-shadow:0 26px 28px rgba(62,48,33,.18)}
+.lux-envelope.open .lux-letter{transform:translateY(-15%);box-shadow:0 26px 28px rgba(62,48,33,.18)}
 .lux-envelope.open+.tap-hint{opacity:0}
 @keyframes luxFloat{0%,100%{transform:translateY(0) rotate(-.45deg)}50%{transform:translateY(-9px) rotate(.35deg)}}
 @media(max-width:560px){
