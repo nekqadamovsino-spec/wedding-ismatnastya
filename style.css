@@ -461,38 +461,25 @@ body.site-opened .hero-name-second{
  .tap-hint span{width:22px}
 }
 @media(max-height:700px){.envelope-copy{margin-bottom:20px}.tap-hint{margin-top:18px}.lux-envelope{width:min(390px,74vh)}}
-/* Закрытое письмо */
-.lux-letter {
-  height: 100%;
-  transform: translateY(58%);
-  pointer-events: none;
-}
-
-/* При открытии письмо сразу движется только вверх */
-.lux-envelope.open .lux-letter {
-  transform: translateY(-18%);
-}
-
-/* Не ставим overflow:hidden на весь конверт */
+/* Письмо полностью находится внутри закрытого конверта */
 .lux-envelope {
   overflow: visible;
 }
 
-/* Нижнюю торчащую часть закрывает отдельная маска */
-.lux-envelope::after {
-  content: "";
-  position: absolute;
-  z-index: 3;
-  left: 0;
-  right: 0;
-  top: 54%;
-  bottom: 0;
-  background: linear-gradient(0deg, #e8dfd3, #faf6ef 82%);
-  clip-path: polygon(0 100%, 50% 0, 100% 100%);
+.lux-letter {
+  top: 5%;
+  height: 90%;
+  transform: translateY(5%);
   pointer-events: none;
+  z-index: 2;
 }
 
-/* После открытия маска остаётся частью кармана */
-.lux-envelope.open::after {
-  opacity: 1;
+/* Карман всегда закрывает нижнюю часть письма */
+.envelope-pocket {
+  z-index: 4;
+}
+
+/* При открытии письмо движется только вверх */
+.lux-envelope.open .lux-letter {
+  transform: translateY(-35%);
 }
