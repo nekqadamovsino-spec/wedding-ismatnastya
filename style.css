@@ -461,20 +461,38 @@ body.site-opened .hero-name-second{
  .tap-hint span{width:22px}
 }
 @media(max-height:700px){.envelope-copy{margin-bottom:20px}.tap-hint{margin-top:18px}.lux-envelope{width:min(390px,74vh)}}
-
-
-/* FINAL SAFE FIX */
-.lux-letter{height:100%;transform:translateY(48%)}
-.lux-envelope.open .lux-letter{transform:translateY(-18%)}
-
-/* Stability fixes */
-#site{display:block}.lux-letter{pointer-events:none}.envelope-screen.opened{display:none}
-/* Письмо не торчит снизу до открытия */
-.lux-envelope {
-  overflow: hidden;
+/* Закрытое письмо */
+.lux-letter {
+  height: 100%;
+  transform: translateY(58%);
+  pointer-events: none;
 }
 
-/* После нажатия разрешаем письму выехать наружу */
-.lux-envelope.open {
+/* При открытии письмо сразу движется только вверх */
+.lux-envelope.open .lux-letter {
+  transform: translateY(-18%);
+}
+
+/* Не ставим overflow:hidden на весь конверт */
+.lux-envelope {
   overflow: visible;
+}
+
+/* Нижнюю торчащую часть закрывает отдельная маска */
+.lux-envelope::after {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  right: 0;
+  top: 54%;
+  bottom: 0;
+  background: linear-gradient(0deg, #e8dfd3, #faf6ef 82%);
+  clip-path: polygon(0 100%, 50% 0, 100% 100%);
+  pointer-events: none;
+}
+
+/* После открытия маска остаётся частью кармана */
+.lux-envelope.open::after {
+  opacity: 1;
 }
