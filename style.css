@@ -464,8 +464,17 @@ body.site-opened .hero-name-second{
 
 
 /* FINAL SAFE FIX */
-.lux-letter{height:100%;transform:translateY(58%)}
+.lux-letter{height:100%;transform:translateY(48%)}
 .lux-envelope.open .lux-letter{transform:translateY(-18%)}
 
 /* Stability fixes */
 #site{display:block}.lux-letter{pointer-events:none}.envelope-screen.opened{display:none}
+/* Письмо не торчит снизу до открытия */
+.lux-envelope {
+  overflow: hidden;
+}
+
+/* После нажатия разрешаем письму выехать наружу */
+.lux-envelope.open {
+  overflow: visible;
+}
