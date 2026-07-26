@@ -122,7 +122,7 @@ function updateCountdown() {
 updateCountdown();
 setInterval(updateCountdown, 1000);
 
-const SCRIPT_URL = '';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxxbVmJM2cxV3JHbLRUym55qn5p9icrOqrbrbhVkhvZjglMFN5L_d7pDWO3UH8oWO513A/exec';
 const form = document.getElementById('rsvpForm');
 const status = document.getElementById('formStatus');
 
